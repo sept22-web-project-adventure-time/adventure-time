@@ -28,3 +28,6 @@ export async function signOutUser() {
 }
 
 /* Data functions */
+export async function getCoffeeShops() {
+    return await client.from('coffee-shops').select('*');
+}
