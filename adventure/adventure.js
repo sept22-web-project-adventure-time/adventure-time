@@ -8,6 +8,7 @@ import { getRandomItem } from '../utils.js';
 // DOM
 const adventureDiv = document.getElementById('adventure-div');
 const saveAdventureButton = document.getElementById('save-adventure-button');
+const newAdventureButton = document.getElementById('new-adventure-button');
 // const displayError = document.getElementById('display-error');
 
 // State
@@ -60,7 +61,9 @@ saveAdventureButton.addEventListener('click', async () => {
     };
     saveAdventure(insertData);
 });
-
+newAdventureButton.addEventListener('click', () => {
+    location.reload();
+});
 // Display functions
 function displayAdventure() {
     adventureDiv.innerHTML = '';
