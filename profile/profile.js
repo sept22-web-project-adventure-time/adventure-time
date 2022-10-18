@@ -3,7 +3,7 @@ import '../auth/user.js';
 import { updateProfile, getUser, getProfile } from '../fetch-utils.js';
 
 // DOM
-
+const saveButton = document.getElementById('save-button');
 const profileForm = document.getElementById('profile-form');
 const errorDisplay = document.getElementById('error-display');
 const nameInput = profileForm.querySelector('[name=name]');
@@ -18,7 +18,7 @@ let user = getUser();
 // Events
 window.addEventListener('load', async () => {
     const response = await getProfile(user.id);
-    error = response.error;
+    // error = response.error;
     profile = response.data;
 
     if (error) {
@@ -30,6 +30,8 @@ window.addEventListener('load', async () => {
 });
 profileForm.addEventListener('submit', async (e) => {
     e.preventDefault();
+    saveButton.disabled = true;
+    saveButton.textContent = '';
     const formData = new FormData(profileForm);
     const profileUpdate = {
         id: user.id,
@@ -39,6 +41,9 @@ profileForm.addEventListener('submit', async (e) => {
     };
     const response = await updateProfile(profileUpdate);
     error = response.error;
+
+    saveButton.disabled = false;
+    saveButton.textContent = 'Save';
 
     if (error) {
         displayError();
