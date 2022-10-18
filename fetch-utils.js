@@ -45,9 +45,5 @@ export async function saveAdventure(adventure) {
 }
 
 export async function updateProfile(profile) {
-    return await client
-        .from('profiles')
-        .upsert(profile)
-        .maybeSingle()
-        .eq('user_id', profile.user_id);
+    return await client.from('profiles').upsert(profile).maybeSingle().eq('id', profile.id);
 }

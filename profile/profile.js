@@ -1,8 +1,9 @@
 // Imports
 import '../auth/user.js';
-import { updateProfile } from '../fetch-utils.js';
+import { updateProfile, getUser } from '../fetch-utils.js';
 
 // DOM
+
 const profileForm = document.getElementById('profile-form');
 const errorDisplay = document.getElementById('error-display');
 // const nameInput = profileForm.querySelector('[name=name]');
@@ -11,14 +12,15 @@ const errorDisplay = document.getElementById('error-display');
 
 // State
 // let profile = null;
-let user = null;
 let error = null;
+let user = getUser();
 
 // Events
 profileForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const formData = new FormData(profileForm);
     const profileUpdate = {
+        id: user.id,
         name: formData.get('name'),
         hometown: formData.get('hometown'),
         adventure_quote: formData.get('adventure-quote'),
