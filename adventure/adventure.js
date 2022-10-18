@@ -6,7 +6,7 @@ import { renderAdventure } from '../render-utils.js';
 import { getRandomItem } from '../utils.js';
 
 // DOM
-
+const adventureDiv = document.getElementById('adventure-div');
 // const displayError = document.getElementById('display-error');
 
 // State
@@ -15,13 +15,11 @@ let coffeeShops = [];
 let eateries = [];
 let activities = [];
 
-let adventures = [
-    {
-        coffeeShop: '',
-        eatery: '',
-        activity: '',
-    },
-];
+let adventure = {
+    coffeeShop: '',
+    eatery: '',
+    activity: '',
+};
 
 // Events
 window.addEventListener('load', async () => {
@@ -30,24 +28,26 @@ window.addEventListener('load', async () => {
     coffeeShops = response.data;
 
     const coffeeShop = getRandomItem(coffeeShops);
-    adventures.coffeeShop = coffeeShop;
+    adventure.coffeeShop = coffeeShop.name;
+
     const response1 = await getActivities();
 
     activities = response1.data;
     const activity = getRandomItem(activities);
-    adventures.activity = activity;
+    adventure.activity = activity.name;
 
     const response2 = await getEateries();
     eateries = response2.data;
 
     const eatery = getRandomItem(eateries);
-    adventures.eatery = eatery;
+    adventure.eatery = eatery.name;
 
-    renderAdventure(adventures);
-
-    // console.log(coffeeShop);
-    // console.log(activity);
-    // console.log(eatery);
+    displayAdventure();
 });
 
 // Display functions
+function displayAdventure() {
+    adventureDiv.innerHTML = '';
+    const adventureEl = renderAdventure(adventure);
+    adventureDiv.append(adventureEl);
+}
