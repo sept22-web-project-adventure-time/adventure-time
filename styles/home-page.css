@@ -10,7 +10,7 @@ h1 {
     margin: 20px;
 }
 
-.adventure-link {
+.adventure-button {
     border-radius: 4px;
     background-color: #fefae0;
     border: none;
@@ -25,7 +25,7 @@ h1 {
     align-content: center;
 }
 
-.adventure-link span {
+.adventure-button span {
     cursor: pointer;
     display: inline-block;
     position: relative;
@@ -33,7 +33,7 @@ h1 {
     align-content: center;
 }
 
-.adventure-link span:after {
+.adventure-button span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -42,11 +42,11 @@ h1 {
     transition: 0.5s;
 }
 
-.adventure-link:hover span {
+.adventure-button:hover span {
     padding-right: 25px;
 }
 
-.adventure-link:hover span:after {
+.adventure-button:hover span:after {
     opacity: 1;
     right: 0;
 }
