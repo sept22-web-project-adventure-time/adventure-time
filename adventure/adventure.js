@@ -1,7 +1,13 @@
 // Imports
 // import './auth/user.js';
 
-import { getCoffeeShops, getActivities, getEateries, saveAdventure } from '../fetch-utils.js';
+import {
+    getCoffeeShops,
+    getActivities,
+    getEateries,
+    saveAdventure,
+    getUser,
+} from '../fetch-utils.js';
 import { renderAdventure } from '../render-utils.js';
 import { getRandomItem } from '../utils.js';
 
@@ -16,6 +22,7 @@ const newAdventureButton = document.getElementById('new-adventure-button');
 let coffeeShops = [];
 let eateries = [];
 let activities = [];
+let user = getUser();
 
 let adventure = {
     coffeeShop: '',
@@ -58,6 +65,7 @@ saveAdventureButton.addEventListener('click', async () => {
         coffee_id: adventure.coffeeShopId,
         activity_id: adventure.activityId,
         eatery_id: adventure.eateryId,
+        user_id: user.id,
     };
     saveAdventure(insertData);
 });

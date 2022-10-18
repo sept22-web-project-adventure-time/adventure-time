@@ -40,8 +40,8 @@ export async function getEateries() {
     return await client.from('eateries').select('*');
 }
 
-export async function saveAdventure(adventure) {
-    return await client.from('saved-adventures').insert(adventure).single();
+export async function saveAdventure(adventure, user_id) {
+    return await client.from('saved-adventures').insert(adventure, user_id).single();
 }
 
 export async function updateProfile(profile) {
@@ -50,4 +50,8 @@ export async function updateProfile(profile) {
 
 export async function getProfile(id) {
     return await client.from('profiles').select('*').eq('id', id).single();
+}
+
+export async function getSavedAdventures(user_id) {
+    return await client.from('saved-adventures').select('*').eq('user_id', user_id);
 }
