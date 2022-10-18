@@ -43,3 +43,7 @@ export async function getEateries() {
 export async function saveAdventure(adventure) {
     return await client.from('saved-adventures').insert(adventure).single();
 }
+
+export async function updateProfile(profile) {
+    return await client.from('profiles').upsert(profile).single();
+}
