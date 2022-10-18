@@ -31,3 +31,11 @@ export async function signOutUser() {
 export async function getCoffeeShops() {
     return await client.from('coffee-shops').select('*');
 }
+
+export async function getActivities() {
+    return await client.from('activities').select('*');
+}
+
+export async function getEateries() {
+    return await client.from('eateries').select('*');
+}
