@@ -19,7 +19,6 @@ window.addEventListener('load', async () => {
     coffeeShops = response.data;
 
     const coffeeShop = getRandomItem(coffeeShops);
-    console.log(coffeeShop);
 });
 
 // Display functions
