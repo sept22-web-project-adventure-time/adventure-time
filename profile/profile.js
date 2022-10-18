@@ -1,6 +1,6 @@
 // Imports
 import '../auth/user.js';
-import { updateProfile, getUser, getProfile } from '../fetch-utils.js';
+import { updateProfile, getUser, getProfile, getSavedAdventures } from '../fetch-utils.js';
 
 // DOM
 const saveButton = document.getElementById('save-button');
@@ -14,11 +14,11 @@ const adventureQuote = profileForm.querySelector('[name=adventure-quote]');
 let profile = null;
 let error = null;
 let user = getUser();
+let savedAdventures = [];
 
 // Events
 window.addEventListener('load', async () => {
     const response = await getProfile(user.id);
-    // error = response.error;
     profile = response.data;
 
     if (error) {
@@ -27,7 +27,11 @@ window.addEventListener('load', async () => {
     if (profile) {
         displayProfile();
     }
+
+    const response2 = await getSavedAdventures(user.id);
+    savedAdventures = response2.data;
 });
+
 profileForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     saveButton.disabled = true;
