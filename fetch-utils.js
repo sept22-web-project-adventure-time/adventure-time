@@ -29,7 +29,7 @@ export async function signOutUser() {
 
 /* Data functions */
 export async function getCoffeeShops() {
-    return await client.from('coffee-shops').select('*');
+    return await client.from('coffee_shops').select('*');
 }
 
 export async function getActivities() {
@@ -53,5 +53,32 @@ export async function getProfile(id) {
 }
 
 export async function getSavedAdventures(user_id) {
-    return await client.from('saved-adventures').select('*').eq('user_id', user_id);
+    const adventures = await client.from('saved-adventures').select('*').eq('user_id', user_id);
+    console.log(adventures);
+    let adventureList = [];
+    for (let adventure of adventures.data) {
+        let adventureObject = {
+            coffee: '',
+            activity: '',
+            eatery: '',
+        };
+        const coffee = await client
+            .from('coffee_shops')
+            .select('name')
+            .eq('id', adventure.coffee_id);
+        adventureObject.coffee = coffee.data[0].name;
+
+        const activity = await client
+            .from('activities')
+            .select('name')
+            .eq('id', adventure.activity_id);
+        adventureObject.activity = activity.data[0].name;
+
+        const eatery = await client.from('eateries').select('name').eq('id', adventure.eatery_id);
+        adventureObject.eatery = eatery.data[0].name;
+
+        adventureList.push(adventureObject);
+    }
+    console.log(adventureList);
+    return adventureList;
 }

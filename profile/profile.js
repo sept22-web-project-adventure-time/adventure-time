@@ -1,6 +1,7 @@
 // Imports
 import '../auth/user.js';
 import { updateProfile, getUser, getProfile, getSavedAdventures } from '../fetch-utils.js';
+import { renderSavedAdventures } from '../render-utils.js';
 
 // DOM
 const saveButton = document.getElementById('save-button');
@@ -9,6 +10,7 @@ const errorDisplay = document.getElementById('error-display');
 const nameInput = profileForm.querySelector('[name=name]');
 const homeTown = profileForm.querySelector('[name=hometown]');
 const adventureQuote = profileForm.querySelector('[name=adventure-quote]');
+const savedAdventuresList = document.getElementById('saved-adventures-display');
 
 // State
 let profile = null;
@@ -30,6 +32,7 @@ window.addEventListener('load', async () => {
 
     const response2 = await getSavedAdventures(user.id);
     savedAdventures = response2.data;
+    console.log(savedAdventures);
 });
 
 profileForm.addEventListener('submit', async (e) => {
@@ -63,5 +66,11 @@ function displayProfile() {
         nameInput.value = profile.name;
         homeTown.value = profile.hometown;
         adventureQuote.value = profile.adventure_quote;
+    }
+}
+
+function displaySavedAdventures() {
+    for (const savedAdventure of savedAdventures) {
+        const savedAdventureEl = renderSavedAdventures(savedAdventure);
     }
 }
