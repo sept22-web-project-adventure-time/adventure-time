@@ -1,0 +1,17 @@
+ul {
+    padding-top: 10px;
+}
+
+li {
+    text-align: center;
+    background: grey;
+    gap: 10px;
+}
+
+span button {
+    padding-top: 10px;
+}
+span {
+    font-size: 2vw;
+    font-size: 2vh;
+}
