@@ -82,5 +82,5 @@ export async function getSavedAdventures(user_id) {
 }
 
 export async function deleteSavedAdventures(id) {
-    return await client.from('saved_adventure').delete().eq('id', id).single();
+    return await client.from('saved_adventures').delete().eq('id', id).single();
 }
