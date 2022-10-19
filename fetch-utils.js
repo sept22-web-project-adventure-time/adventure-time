@@ -41,7 +41,7 @@ export async function getEateries() {
 }
 
 export async function saveAdventure(adventure, user_id) {
-    return await client.from('saved-adventures').insert(adventure, user_id).single();
+    return await client.from('saved_adventures').insert(adventure, user_id).single();
 }
 
 export async function updateProfile(profile) {
@@ -53,7 +53,7 @@ export async function getProfile(id) {
 }
 
 export async function getSavedAdventures(user_id) {
-    const adventures = await client.from('saved-adventures').select('*').eq('user_id', user_id);
+    const adventures = await client.from('saved_adventures').select('*').eq('user_id', user_id);
     let adventureList = [];
     for (let adventure of adventures.data) {
         let adventureObject = {
