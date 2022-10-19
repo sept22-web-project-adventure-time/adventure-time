@@ -1,6 +1,12 @@
 // Imports
 import '../auth/user.js';
-import { updateProfile, getUser, getProfile, getSavedAdventures } from '../fetch-utils.js';
+import {
+    updateProfile,
+    getUser,
+    getProfile,
+    getSavedAdventures,
+    deleteSavedAdventures,
+} from '../fetch-utils.js';
 import { renderSavedAdventures } from '../render-utils.js';
 
 // DOM
