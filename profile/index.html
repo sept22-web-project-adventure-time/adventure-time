@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
         <!-- title and favicon -->
-        <title>Adventure Time</title>
+        <title>Supabase Web App</title>
         <link rel="icon" type="image/x-icon" href="/assets/alchemy-favicon.png" />
 
         <!-- js -->
@@ -15,7 +15,8 @@
             defer
             src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.35.7/dist/umd/supabase.min.js"
         ></script>
-        <script type="module" src="app.js"></script>
+        <!-- <script type="module" src="app.js"></script> -->
+        <script type="module" src="profile.js"></script>
 
         <!-- fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,7 +29,7 @@
         <!-- css -->
         <link rel="stylesheet" href="/styles/reset.css" />
         <link rel="stylesheet" href="/styles/global.css" />
-        <link rel="stylesheet" href="/styles/home-page.css" />
+        <link rel="stylesheet" href="/styles/form.css" />
         <!-- add link for page specific css -->
     </head>
 
@@ -45,12 +46,37 @@
         </header>
 
         <main>
-            <h1>Welcome to the Best Day Ever</h1>
-            <h3>Let us handle the plan. You take on the adventure</h3>
-            <!-- <a class="adventure-link" id="adventure-link" href="/adventure/">Adventure Time</a> -->
-            <button id="adventure-button" class="adventure-button">
-                <span>PDX Adventure </span>
-            </button>
+            <div>
+                <p id="error-display"></p>
+                <form id="profile-form">
+                    <label>
+                        <div>Name</div>
+                        <input name="name" id="profile-name" required placeholder="Name" />
+                    </label>
+
+                    <label>
+                        <div>Hometown</div>
+                        <input
+                            name="hometown"
+                            id="profile-hometown"
+                            required
+                            placeholder="Hometown"
+                        />
+                    </label>
+
+                    <label>
+                        <div>Favorite Adventure Quote</div>
+                        <textarea
+                            name="adventure-quote"
+                            id="profile-quote"
+                            placeholder="Favorite Adventure Quote"
+                        ></textarea>
+                    </label>
+
+                    <button id="save-button">Save</button>
+                </form>
+            </div>
+            <ul id="saved-adventures-display"></ul>
         </main>
     </body>
 </html>

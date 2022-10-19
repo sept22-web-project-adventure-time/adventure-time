@@ -15,7 +15,8 @@
             defer
             src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.35.7/dist/umd/supabase.min.js"
         ></script>
-        <script type="module" src="app.js"></script>
+        <!-- <script type="module" src="../app.js"></script> -->
+        <script type="module" src="about.js"></script>
 
         <!-- fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,14 +29,14 @@
         <!-- css -->
         <link rel="stylesheet" href="/styles/reset.css" />
         <link rel="stylesheet" href="/styles/global.css" />
-        <link rel="stylesheet" href="/styles/home-page.css" />
         <!-- add link for page specific css -->
+        <link rel="stylesheet" href="/styles/about.css"
     </head>
 
     <body>
         <header class="page-header">
             <!-- <img class="logo" src="/assets/html_css_js.png" alt="logo" /> -->
-            <p class="title">Adventure Time</p>
+            <p class="title">Adventure Time: About Us</p>
             <nav>
                 <a href="/">Home</a>
                 <a href="/profile/">Profile</a>
@@ -45,12 +46,32 @@
         </header>
 
         <main>
-            <h1>Welcome to the Best Day Ever</h1>
-            <h3>Let us handle the plan. You take on the adventure</h3>
-            <!-- <a class="adventure-link" id="adventure-link" href="/adventure/">Adventure Time</a> -->
-            <button id="adventure-button" class="adventure-button">
-                <span>PDX Adventure </span>
-            </button>
+            <section class="mission-section">
+                <h2>Mission:</h2>
+                <h1>Step out of your comfort zone and experience something new.</h1>
+            </section>
+            <section class="bio-section">
+                <div class="abdullahi">
+                    <img src="/assets/abdullahi.jpg" alt="Abdullahi headshot" />
+                    <h3>Abdullahi Elmi</h3>
+                    <p>Software Engineer</p>
+                </div>
+                <div class="hana">
+                    <img src="/assets/hana.jpg" alt="Hana headshot" />
+                    <h3>Hana Acciaioli</h3>
+                    <p>Software Engineer</p>
+                </div>
+                <div class="hunter">
+                    <img src="/assets/hunter.jpg" alt="Hunter headshot" />
+                    <h3>Hunter Czarapata</h3>
+                    <p>Software Engineer</p>
+                </div>
+                <div class="emily">
+                    <img src="/assets/emily.jpg" alt="Emily headshot" />
+                    <h3>Emily Sellers</h3>
+                    <p>Software Engineer</p>
+                </div>
+            </section>
         </main>
     </body>
 </html>

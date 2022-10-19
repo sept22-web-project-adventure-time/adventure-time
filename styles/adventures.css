@@ -1,0 +1,14 @@
+.coffee-section h1 {
+    background: rgb(105, 189, 105);
+}
+
+.coffee-section {
+    background: yellow;
+}
+
+.activity-section {
+    background-color: blue;
+}
+
+.eatery-section {
+}
