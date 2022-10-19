@@ -12,3 +12,7 @@
 
 .eatery-section {
 }
+
+#save-adventure-button:hover:before {
+    content: 'save to profile';
+}

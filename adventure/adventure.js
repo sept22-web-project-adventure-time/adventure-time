@@ -68,6 +68,7 @@ saveAdventureButton.addEventListener('click', async () => {
         user_id: user.id,
     };
     saveAdventure(insertData);
+    saveAdventureButton.disabled = true;
 });
 newAdventureButton.addEventListener('click', () => {
     location.reload();
