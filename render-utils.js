@@ -33,15 +33,25 @@ export function renderAdventure(adventure) {
 
 export function renderSavedAdventures({ coffee, activity, eatery }) {
     const li = document.createElement('li');
+
     const coffeeShopEl = document.createElement('span');
     coffeeShopEl.textContent = coffee;
+
+    const coffeeIntro = document.createElement('span');
+    coffeeIntro.textContent = 'Coffee at ';
 
     const activityEl = document.createElement('span');
     activityEl.textContent = activity;
 
+    const activityIntro = document.createElement('span');
+    activityIntro.textContent = ', ';
+
     const eateryEl = document.createElement('span');
     eateryEl.textContent = eatery;
 
-    li.append(coffeeShopEl, activityEl, eateryEl);
+    const eateryIntro = document.createElement('span');
+    eateryIntro.textContent = ' & eat at ';
+
+    li.append(coffeeIntro, coffeeShopEl, activityIntro, activityEl, eateryIntro, eateryEl);
     return li;
 }
