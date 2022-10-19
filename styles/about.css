@@ -5,16 +5,33 @@ main {
 
 .mission-section {
     text-align: center;
-    padding-top: 20%;
+    padding-top: 15%;
 }
 
 .bio-section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     text-align: center;
+    gap: 10px;
 }
 
 .bio-section img {
     border-radius: 50%;
     width: 250px;
+}
+
+.abdullahi {
+    background: #d1d6a7;
+}
+
+.hana {
+    background: #929b74;
+}
+
+.hunter {
+    background: #fefae0;
+}
+
+.emily {
+    background: #beb49a;
 }
