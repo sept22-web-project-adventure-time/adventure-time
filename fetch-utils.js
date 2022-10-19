@@ -80,3 +80,7 @@ export async function getSavedAdventures(user_id) {
     }
     return adventureList;
 }
+
+export async function deleteSavedAdventures(id) {
+    return await client.from('saved_adventure').delete().eq('id', id).single();
+}
