@@ -66,7 +66,7 @@ function displayError() {
     errorDisplay.textContent = error.message;
 }
 
-export function displayProfile() {
+function displayProfile() {
     if (profile) {
         nameInput.value = profile.name;
         homeTown.value = profile.hometown;
@@ -74,7 +74,7 @@ export function displayProfile() {
     }
 }
 
-export function displaySavedAdventures(adventureList) {
+function displaySavedAdventures(adventureList) {
     for (let adventure of adventureList) {
         const savedAdventureEl = renderSavedAdventures(adventure);
         savedAdventuresList.append(savedAdventureEl);

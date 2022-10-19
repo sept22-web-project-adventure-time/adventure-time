@@ -1,5 +1,4 @@
 import { deleteSavedAdventures } from './fetch-utils.js';
-import { displaySavedAdventures } from './profile/profile.js';
 
 export function renderAdventure(adventure) {
     const div = document.createElement('div');
