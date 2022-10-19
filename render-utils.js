@@ -33,25 +33,38 @@ export function renderAdventure(adventure) {
 
 export function renderSavedAdventures({ coffee, activity, eatery }) {
     const li = document.createElement('li');
-
-    const coffeeShopEl = document.createElement('span');
-    coffeeShopEl.textContent = coffee;
-
     const coffeeIntro = document.createElement('span');
     coffeeIntro.textContent = 'Coffee at ';
 
-    const activityEl = document.createElement('span');
-    activityEl.textContent = activity;
+    const coffeeShopEl = document.createElement('span');
+    coffeeShopEl.textContent = coffee;
+    coffeeShopEl.classList.add('bold');
 
     const activityIntro = document.createElement('span');
     activityIntro.textContent = ', ';
 
-    const eateryEl = document.createElement('span');
-    eateryEl.textContent = eatery;
+    const activityEl = document.createElement('span');
+    activityEl.textContent = activity;
+    activityEl.classList.add('bold');
 
     const eateryIntro = document.createElement('span');
     eateryIntro.textContent = ' & eat at ';
 
-    li.append(coffeeIntro, coffeeShopEl, activityIntro, activityEl, eateryIntro, eateryEl);
+    const eateryEl = document.createElement('span');
+    eateryEl.textContent = eatery;
+    eateryEl.classList.add('bold');
+
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = '🗑';
+
+    li.append(
+        coffeeIntro,
+        coffeeShopEl,
+        activityIntro,
+        activityEl,
+        eateryIntro,
+        eateryEl,
+        deleteButton
+    );
     return li;
 }
