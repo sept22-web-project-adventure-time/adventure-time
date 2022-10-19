@@ -57,6 +57,7 @@ export async function getSavedAdventures(user_id) {
     let adventureList = [];
     for (let adventure of adventures.data) {
         let adventureObject = {
+            id: adventure.id,
             coffee: '',
             activity: '',
             eatery: '',

@@ -1,3 +1,6 @@
+import { deleteSavedAdventures } from './fetch-utils.js';
+import { displaySavedAdventures } from './profile/profile.js';
+
 export function renderAdventure(adventure) {
     const div = document.createElement('div');
     div.classList.add('adventure-container');
@@ -31,31 +34,34 @@ export function renderAdventure(adventure) {
     return div;
 }
 
-export function renderSavedAdventures({ coffee, activity, eatery }) {
+export function renderSavedAdventures(adventure) {
     const li = document.createElement('li');
     const coffeeIntro = document.createElement('span');
     coffeeIntro.textContent = 'Coffee at ';
 
     const coffeeShopEl = document.createElement('span');
-    coffeeShopEl.textContent = coffee;
+    coffeeShopEl.textContent = adventure.coffee;
     coffeeShopEl.classList.add('bold');
 
     const activityIntro = document.createElement('span');
     activityIntro.textContent = ', ';
 
     const activityEl = document.createElement('span');
-    activityEl.textContent = activity;
+    activityEl.textContent = adventure.activity;
     activityEl.classList.add('bold');
 
     const eateryIntro = document.createElement('span');
     eateryIntro.textContent = ' & eat at ';
 
     const eateryEl = document.createElement('span');
-    eateryEl.textContent = eatery;
+    eateryEl.textContent = adventure.eatery;
     eateryEl.classList.add('bold');
 
     const deleteButton = document.createElement('button');
     deleteButton.textContent = '🗑';
+    deleteButton.addEventListener('click', async () => {
+        return await deleteSavedAdventures(adventure.id);
+    });
 
     li.append(
         coffeeIntro,

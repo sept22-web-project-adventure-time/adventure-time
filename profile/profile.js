@@ -66,7 +66,7 @@ function displayError() {
     errorDisplay.textContent = error.message;
 }
 
-function displayProfile() {
+export function displayProfile() {
     if (profile) {
         nameInput.value = profile.name;
         homeTown.value = profile.hometown;
@@ -74,9 +74,9 @@ function displayProfile() {
     }
 }
 
-function displaySavedAdventures(adventureList) {
-    for (let item of adventureList) {
-        const savedAdventureEl = renderSavedAdventures(item);
+export function displaySavedAdventures(adventureList) {
+    for (let adventure of adventureList) {
+        const savedAdventureEl = renderSavedAdventures(adventure);
         savedAdventuresList.append(savedAdventureEl);
     }
 }
