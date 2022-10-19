@@ -22,18 +22,17 @@ export function renderAdventure(adventure) {
     return div;
 }
 
-// export function renderSavedAdventures(savedAdventure) {
-//     const li = document.createElement('li');
+export function renderSavedAdventures({ coffee, activity, eatery }) {
+    const li = document.createElement('li');
+    const coffeeShopEl = document.createElement('span');
+    coffeeShopEl.textContent = coffee;
 
-//     const coffeeShop = document.createElement('span');
-//     coffeeShop.textContent = savedAdventure.coffee_id;
+    const activityEl = document.createElement('span');
+    activityEl.textContent = activity;
 
-//     const activity = document.createElement('span');
-//     activity.textContent = savedAdventure.activity_id;
+    const eateryEl = document.createElement('span');
+    eateryEl.textContent = eatery;
 
-//     const eatery = document.createElement('span');
-//     eatery.textContent = savedAdventure.eatery_id;
-
-//     li.append(coffeeShop, activity, eatery);
-//     return li;
-// }
+    li.append(coffeeShopEl, activityEl, eateryEl);
+    return li;
+}

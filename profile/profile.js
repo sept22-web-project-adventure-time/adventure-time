@@ -16,7 +16,7 @@ const savedAdventuresList = document.getElementById('saved-adventures-display');
 let profile = null;
 let error = null;
 let user = getUser();
-let savedAdventures = [];
+// let savedAdventures = [];
 
 // Events
 window.addEventListener('load', async () => {
@@ -30,9 +30,8 @@ window.addEventListener('load', async () => {
         displayProfile();
     }
 
-    const response2 = await getSavedAdventures(user.id);
-    savedAdventures = response2.data;
-    console.log(savedAdventures);
+    const adventureList = await getSavedAdventures(user.id);
+    displaySavedAdventures(adventureList);
 });
 
 profileForm.addEventListener('submit', async (e) => {
@@ -69,8 +68,9 @@ function displayProfile() {
     }
 }
 
-function displaySavedAdventures() {
-    for (const savedAdventure of savedAdventures) {
-        const savedAdventureEl = renderSavedAdventures(savedAdventure);
+function displaySavedAdventures(adventureList) {
+    for (let item of adventureList) {
+        const savedAdventureEl = renderSavedAdventures(item);
+        savedAdventuresList.append(savedAdventureEl);
     }
 }

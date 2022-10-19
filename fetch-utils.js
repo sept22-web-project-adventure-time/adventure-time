@@ -54,7 +54,6 @@ export async function getProfile(id) {
 
 export async function getSavedAdventures(user_id) {
     const adventures = await client.from('saved-adventures').select('*').eq('user_id', user_id);
-    console.log(adventures);
     let adventureList = [];
     for (let adventure of adventures.data) {
         let adventureObject = {
@@ -79,6 +78,5 @@ export async function getSavedAdventures(user_id) {
 
         adventureList.push(adventureObject);
     }
-    console.log(adventureList);
     return adventureList;
 }
