@@ -1,7 +1,7 @@
 main {
     display: grid;
     grid-template-rows: 400px 1fr;
-    background: #a2b8c5;
+    background: #d4a373;
 }
 
 .mission-section {
@@ -38,7 +38,7 @@ main {
 }
 
 .abdullahi {
-    background: #d1d6a7;
+    background: #ccd5ae;
     border-radius: 10px;
     width: 90%;
 }
@@ -48,7 +48,7 @@ main {
 }
 
 .hana {
-    background: #929b74;
+    background: #e9edc9;
     border-radius: 10px;
     width: 90%;
 }
@@ -68,7 +68,7 @@ main {
 }
 
 .emily {
-    background: #beb49a;
+    background: #faedcd;
     border-radius: 10px;
     width: 90%;
 }

@@ -4,14 +4,29 @@ ul {
 
 li {
     text-align: center;
-    background: grey;
-    gap: 10px;
+    background: #523a32;
+    margin: 10px;
+
+    border-radius: 10px;
 }
 
-span button {
-    padding-top: 10px;
+li button {
+    gap: 10px;
+    color: black;
+    height: 25px;
+    width: 25px;
+    margin-left: 10px;
+    margin-bottom: 3px;
 }
+
 span {
     font-size: 2vw;
     font-size: 2vh;
+    color: #a2b8c5;
+}
+
+.bold {
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    color: #f1bc6c;
 }

@@ -12,21 +12,24 @@ h1 {
     font-size: 50px;
     margin: 20px;
     font-family: 'Oswald', sans-serif;
+    color: white;
 }
 
 h3 {
-    font-family: 'Sacramento', cursive;
+    font-family: 'Oswald', sans-serif;
     font-size: 20px;
     padding-bottom: 20px;
+    color: white;
 }
 
 .adventure-button {
     border-radius: 4px;
-    background-color: #fefae0;
+    background-color: #dc955f;
     border: none;
     color: #523a32;
     text-align: center;
     font-size: 22px;
+    font-weight: bold;
     padding: 20px;
     width: 225px;
     transition: all 0.5s;

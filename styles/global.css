@@ -1,21 +1,23 @@
 :root {
     --background: rgb(224, 234, 247);
-    --header-background: white;
+    --header-background: #523a32;
     --text-color: rgb(7, 5, 68);
     --label-color: rgb(75, 102, 98);
     --placeholder-color: rgb(136, 136, 153);
     --offset-color: rgb(217, 236, 217);
     --action-color: rgb(77, 132, 252);
 
-    --primary-font: 'Rubik', Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans',
-        'DejaVu Sans', 'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
+    /* --primary-font: 'Rubik', Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans',
+        'DejaVu Sans', 'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif; */
+    --primary-font: 'Oswald', sans-serif;
 }
 
 body {
     height: 100vh;
-    font-family: var(--primary-font);
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
     color: var(--text-color);
-    background: var(--background);
+    /* background: var(--background); */
     display: grid;
     grid-template-rows: auto 1fr;
 }
@@ -23,12 +25,13 @@ body {
 .page-header {
     position: sticky;
     top: 0;
-    padding: 15px;
+    /* padding: 15px; */
     height: 80px;
 
     display: flex;
     align-items: center;
     gap: 10px;
+    color: #a2b8c5;
 
     background-color: var(--header-background);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -46,7 +49,7 @@ body {
 
 .page-header nav {
     display: flex;
-    gap: 10px;
+    /* gap: 10px; */
 }
 
 main {
@@ -68,4 +71,26 @@ main {
 
 .hidden {
     display: none;
+}
+
+a {
+    background-color: #523a32;
+    box-shadow: 0 5px 0 #2e211c;
+    color: #a2b8c5;
+    padding: 1em 1.5em;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a:hover {
+    background-color: #a2b8c5;
+    box-shadow: 0 5px 0 #59666d;
+    color: #523a32;
+    font-weight: bold;
+}
+
+a:active {
+    box-shadow: none;
+    top: 5px;
 }

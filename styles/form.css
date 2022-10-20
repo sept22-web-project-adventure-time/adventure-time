@@ -8,10 +8,11 @@ form:not(.inline) {
 
     display: grid;
     gap: 20px;
+    border-radius: 20px;
 }
 
 label {
-    font-family: 'Titillium Web';
+    font-family: 'Oswald', sans-serif;
     font-size: 0.9em;
     font-weight: bold;
     color: var(--label-color);
@@ -46,8 +47,12 @@ form *::placeholder {
 form textarea {
     height: 70px;
     padding: 5px;
-    font-family: 'Rubik';
+    font-family: 'Oswald', sans-serif;
     resize: vertical;
+}
+
+form input {
+    font-family: 'Oswald', sans-serif;
 }
 
 form button {
@@ -57,6 +62,8 @@ form button {
     border: 0;
     font-weight: bold;
     color: white;
+    font-family: 'Oswald', sans-serif;
+    border-radius: 20px;
 }
 
 form button:disabled {
