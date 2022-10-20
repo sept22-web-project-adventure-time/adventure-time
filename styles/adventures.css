@@ -105,12 +105,12 @@
 
 main {
     display: grid;
-    grid-template-rows: 120px 1fr 1fr;
+    grid-template-rows: 130px 1fr 1fr;
     text-align: center;
 }
 
 main h1 {
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 55px;
     font-size: 4vw;
 }

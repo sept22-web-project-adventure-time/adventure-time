@@ -42,7 +42,7 @@ body {
 }
 
 .page-header .title {
-    font-size: 2em;
+    font-size: 4vw;
     font-weight: 800;
     flex-grow: 2;
     padding-left: 30px;
