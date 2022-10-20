@@ -38,7 +38,8 @@ body {
 }
 
 .page-header .logo {
-    height: 100%;
+    height: 80%;
+    padding-left: 20px;
 }
 
 .page-header .title {
