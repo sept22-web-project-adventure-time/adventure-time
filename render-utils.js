@@ -1,5 +1,3 @@
-import { deleteSavedAdventures } from './fetch-utils.js';
-
 export function renderAdventure(adventure) {
     const div = document.createElement('div');
     div.classList.add('adventure-container');

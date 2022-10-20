@@ -1,12 +1,12 @@
 main {
     display: grid;
-    grid-template-rows: 400px 1fr;
+    grid-template-rows: 300px auto 1fr;
     background: #d4a373;
 }
 
 .mission-section {
     text-align: center;
-    padding-top: 5%;
+    padding-top: 2%;
 }
 
 .mission-section h2 {
@@ -75,4 +75,8 @@ main {
 
 .emily p {
     font-family: 'Oswald', sans-serif;
+}
+
+.linked-in {
+    max-width: 25%;
 }
