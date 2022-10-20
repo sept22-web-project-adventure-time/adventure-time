@@ -22,7 +22,6 @@ const savedAdventuresList = document.getElementById('saved-adventures-display');
 let profile = null;
 let error = null;
 let user = getUser();
-// let savedAdventures = [];
 let adventureList = [];
 
 // Events

@@ -1,5 +1,3 @@
-import { deleteSavedAdventures } from './fetch-utils.js';
-
 export function renderAdventure(adventure) {
     const div = document.createElement('div');
     div.classList.add('adventure-container');
@@ -56,17 +54,6 @@ export function renderSavedAdventures(adventure) {
     eateryEl.textContent = adventure.eatery;
     eateryEl.classList.add('bold');
 
-    // deleteButton.classList.add('delete-button');
-    // deleteButton.setAttribute('id', 'delete-button');
-
-    li.append(
-        coffeeIntro,
-        coffeeShopEl,
-        activityIntro,
-        activityEl,
-        eateryIntro,
-        eateryEl
-        // deleteButton
-    );
+    li.append(coffeeIntro, coffeeShopEl, activityIntro, activityEl, eateryIntro, eateryEl);
     return li;
 }
