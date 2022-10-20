@@ -82,6 +82,7 @@ main {
     position: relative;
     text-decoration: none;
     text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
 }
 
 .page-header a:hover {
