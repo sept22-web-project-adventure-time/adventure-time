@@ -41,7 +41,7 @@ export function renderSavedAdventures(adventure) {
     coffeeShopEl.classList.add('bold');
 
     const activityIntro = document.createElement('span');
-    activityIntro.textContent = ', ';
+    activityIntro.textContent = ', then ';
 
     const activityEl = document.createElement('span');
     activityEl.textContent = adventure.activity;

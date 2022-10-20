@@ -4,7 +4,7 @@ ul {
 
 li {
     text-align: center;
-    background: #523a32;
+    background: white;
     margin: 10px;
 
     border-radius: 10px;
@@ -17,16 +17,18 @@ li button {
     width: 25px;
     margin-left: 10px;
     margin-bottom: 3px;
+    border-style: none;
+    background: white;
 }
 
 span {
     font-size: 2vw;
     font-size: 2vh;
-    color: #a2b8c5;
+    color: rgb(137, 162, 55);
 }
 
 .bold {
     font-weight: bold;
     font-family: 'Oswald', sans-serif;
-    color: #f1bc6c;
+    color: #483c2f;
 }
