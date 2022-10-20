@@ -1,7 +1,9 @@
 main {
     display: grid;
     grid-template-rows: 300px auto 1fr;
-    background: #d4a373;
+    background-image: url(/assets/vista-point.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .mission-section {
@@ -12,10 +14,12 @@ main {
 .mission-section h2 {
     font-family: 'Oswald', sans-serif;
     font-size: 50px;
+    color: rgb(47, 38, 38);
 }
 
 .mission-section h1 {
     font-family: 'Oswald', sans-serif;
+    color: rgb(47, 38, 38);
 }
 .bio-section {
     display: grid;
@@ -35,46 +39,51 @@ main {
     width: 95%;
     font-family: 'Sacramento', cursive;
     font-size: 2.8vw;
+    color: rgb(47, 38, 38);
 }
 
 .abdullahi {
-    background: #ccd5ae;
+    background: #efc5a4;
     border-radius: 10px;
     width: 90%;
 }
 
 .abdullahi p {
     font-family: 'Oswald', sans-serif;
+    color: rgb(47, 38, 38);
 }
 
 .hana {
-    background: #e9edc9;
+    background: #efc5a4;
     border-radius: 10px;
     width: 90%;
 }
 
 .hana p {
     font-family: 'Oswald', sans-serif;
+    color: rgb(47, 38, 38);
 }
 
 .hunter {
-    background: #fefae0;
+    background: #efc5a4;
     border-radius: 10px;
     width: 90%;
 }
 
 .hunter p {
     font-family: 'Oswald', sans-serif;
+    color: rgb(47, 38, 38);
 }
 
 .emily {
-    background: #faedcd;
+    background: #efc5a4;
     border-radius: 10px;
     width: 90%;
 }
 
 .emily p {
     font-family: 'Oswald', sans-serif;
+    color: rgb(47, 38, 38);
 }
 
 .linked-in {

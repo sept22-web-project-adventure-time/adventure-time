@@ -10,6 +10,19 @@ li {
     border-radius: 10px;
 }
 
+h2 {
+    color: rgb(49, 42, 42);
+    text-align: center;
+}
+
+#saved-adventures-header {
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    width: 250px;
+    margin: 40px auto 20px auto;
+}
+
 li button {
     gap: 10px;
     color: black;
@@ -39,10 +52,8 @@ li button {
 
 li button .hover-text {
     visibility: hidden;
-    width: 120px;
-    border-inline-color: black;
-    border-inline-style: solid;
-    border-inline: 2px;
+    width: 75px;
+    font-size: 1.3vw;
     background-color: rgb(251, 248, 248);
     color: rgb(245, 92, 92);
     text-align: center;
@@ -51,8 +62,8 @@ li button .hover-text {
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
-    bottom: 100%;
-    left: 50%;
+    bottom: 25%;
+    left: 400%;
     margin-left: -60px;
     font-family: 'Oswald', sans-serif;
 }
