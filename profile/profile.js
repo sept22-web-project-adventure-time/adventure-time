@@ -83,10 +83,14 @@ function displaySavedAdventures(adventureList) {
 
         const deleteButton = document.createElement('button');
         deleteButton.textContent = '🗑';
+        const hoverSpan = document.createElement('span');
+        hoverSpan.classList.add('hover-text');
+        hoverSpan.textContent = 'Delete Adventure';
         deleteButton.addEventListener('click', async () => {
             await deleteSavedAdventures(adventure.id);
             savedAdventureEl.innerHTML = '';
         });
+        deleteButton.append(hoverSpan);
         savedAdventureEl.append(deleteButton);
         savedAdventuresList.append(savedAdventureEl);
     }

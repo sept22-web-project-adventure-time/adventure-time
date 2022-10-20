@@ -32,3 +32,36 @@ span {
     font-family: 'Oswald', sans-serif;
     color: #483c2f;
 }
+li button {
+    position: relative;
+    display: inline-block;
+}
+
+li button .hover-text {
+    visibility: hidden;
+    width: 120px;
+    border-inline-color: black;
+    border-inline-style: solid;
+    border-inline: 2px;
+    background-color: rgb(251, 248, 248);
+    color: rgb(245, 92, 92);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    font-family: 'Oswald', sans-serif;
+}
+
+li button:hover .hover-text {
+    visibility: visible;
+}
+
+li button:hover {
+    background: rgb(243, 110, 110);
+    border-radius: 2px;
+}
