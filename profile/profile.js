@@ -81,26 +81,14 @@ function displayProfile() {
 function displaySavedAdventures(adventureList) {
     for (let adventure of adventureList) {
         const savedAdventureEl = renderSavedAdventures(adventure);
-        console.log(savedAdventureEl);
 
         const deleteButton = document.createElement('button');
         deleteButton.textContent = '🗑';
         deleteButton.addEventListener('click', async () => {
             await deleteSavedAdventures(adventure.id);
-            savedAdventuresList.innerHTML = '';
-            await fetchAndDisplay();
+            savedAdventureEl.innerHTML = '';
         });
         savedAdventureEl.append(deleteButton);
         savedAdventuresList.append(savedAdventureEl);
-
-        // if (deleteButton) {
-        //     deleteButton.addEventListener('click', async () => {
-        //         console.log('click', adventure.id);
-        //         await deleteSavedAdventures(adventure.id);
-        //         await fetchAndDisplay();
-        //         // console.log(adventureList.adventure.id);
-        //     });
-        //     console.log(adventure.id);
-        // }
     }
 }
