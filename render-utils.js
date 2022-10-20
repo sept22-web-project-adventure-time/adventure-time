@@ -58,9 +58,11 @@ export function renderSavedAdventures(adventure) {
 
     const deleteButton = document.createElement('button');
     deleteButton.textContent = '🗑';
-    deleteButton.addEventListener('click', async () => {
-        return await deleteSavedAdventures(adventure.id);
-    });
+    // deleteButton.addEventListener('click', async () => {
+    //     return await deleteSavedAdventures(adventure.id);
+    // });
+    deleteButton.classList.add('delete-button');
+    // deleteButton.setAttribute('id', 'delete-button');
 
     li.append(
         coffeeIntro,

@@ -25,6 +25,11 @@ let user = getUser();
 // let savedAdventures = [];
 
 // Events
+async function fetchAndDisplay() {
+    const adventureList = await getSavedAdventures(user.id);
+    displaySavedAdventures(adventureList);
+}
+
 window.addEventListener('load', async () => {
     const response = await getProfile(user.id);
     profile = response.data;
@@ -35,9 +40,7 @@ window.addEventListener('load', async () => {
     if (profile) {
         displayProfile();
     }
-
-    const adventureList = await getSavedAdventures(user.id);
-    displaySavedAdventures(adventureList);
+    await fetchAndDisplay();
 });
 
 profileForm.addEventListener('submit', async (e) => {
@@ -77,6 +80,24 @@ function displayProfile() {
 function displaySavedAdventures(adventureList) {
     for (let adventure of adventureList) {
         const savedAdventureEl = renderSavedAdventures(adventure);
+        console.log(savedAdventureEl);
         savedAdventuresList.append(savedAdventureEl);
+
+        // if (deleteButton) {
+        //     deleteButton.addEventListener('click', async () => {
+        //         console.log('click', adventure.id);
+        //         await deleteSavedAdventures(adventure.id);
+        //         await fetchAndDisplay();
+        //         // console.log(adventureList.adventure.id);
+        //     });
+        //     console.log(adventure.id);
+        // }
     }
+    const deleteButtons = savedAdventuresList.querySelectorAll('delete-button');
+    console.log(deleteButtons);
+    deleteButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            console.log('hello');
+        });
+    });
 }
