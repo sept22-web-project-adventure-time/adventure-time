@@ -1,6 +1,6 @@
 main {
     display: grid;
-    grid-template-rows: 100px 50px 100px;
+    grid-template-rows: 120px 200px 100px;
     align-content: center;
     text-align: center;
     background-image: url(/assets/Portland.jpg);
@@ -9,7 +9,7 @@ main {
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 80px;
     margin: 20px;
     font-family: 'Oswald', sans-serif;
     color: white;
@@ -17,7 +17,7 @@ h1 {
 
 h3 {
     font-family: 'Oswald', sans-serif;
-    font-size: 20px;
+    font-size: 40px;
     padding-bottom: 20px;
     color: white;
 }
