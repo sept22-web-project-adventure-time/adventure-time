@@ -56,12 +56,7 @@ export function renderSavedAdventures(adventure) {
     eateryEl.textContent = adventure.eatery;
     eateryEl.classList.add('bold');
 
-    const deleteButton = document.createElement('button');
-    deleteButton.textContent = '🗑';
-    // deleteButton.addEventListener('click', async () => {
-    //     return await deleteSavedAdventures(adventure.id);
-    // });
-    deleteButton.classList.add('delete-button');
+    // deleteButton.classList.add('delete-button');
     // deleteButton.setAttribute('id', 'delete-button');
 
     li.append(
@@ -70,8 +65,8 @@ export function renderSavedAdventures(adventure) {
         activityIntro,
         activityEl,
         eateryIntro,
-        eateryEl,
-        deleteButton
+        eateryEl
+        // deleteButton
     );
     return li;
 }

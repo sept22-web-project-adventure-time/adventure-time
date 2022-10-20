@@ -23,10 +23,11 @@ let profile = null;
 let error = null;
 let user = getUser();
 // let savedAdventures = [];
+let adventureList = [];
 
 // Events
 async function fetchAndDisplay() {
-    const adventureList = await getSavedAdventures(user.id);
+    adventureList = await getSavedAdventures(user.id);
     displaySavedAdventures(adventureList);
 }
 
@@ -81,6 +82,15 @@ function displaySavedAdventures(adventureList) {
     for (let adventure of adventureList) {
         const savedAdventureEl = renderSavedAdventures(adventure);
         console.log(savedAdventureEl);
+
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = '🗑';
+        deleteButton.addEventListener('click', async () => {
+            await deleteSavedAdventures(adventure.id);
+            savedAdventuresList.innerHTML = '';
+            await fetchAndDisplay();
+        });
+        savedAdventureEl.append(deleteButton);
         savedAdventuresList.append(savedAdventureEl);
 
         // if (deleteButton) {
@@ -93,11 +103,4 @@ function displaySavedAdventures(adventureList) {
         //     console.log(adventure.id);
         // }
     }
-    const deleteButtons = savedAdventuresList.querySelectorAll('delete-button');
-    console.log(deleteButtons);
-    deleteButtons.forEach((button) => {
-        button.addEventListener('click', () => {
-            console.log('hello');
-        });
-    });
 }
