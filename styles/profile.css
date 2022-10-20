@@ -4,7 +4,7 @@ ul {
 
 li {
     text-align: center;
-    background: #523a32;
+    background: white;
     margin: 10px;
 
     border-radius: 10px;
@@ -17,6 +17,8 @@ li button {
     width: 25px;
     margin-left: 10px;
     margin-bottom: 3px;
+    border-style: none;
+    background: white;
 }
 
 span {
@@ -28,5 +30,5 @@ span {
 .bold {
     font-weight: bold;
     font-family: 'Oswald', sans-serif;
-    color: #ffe7cb;
+    color: #483c2f;
 }
