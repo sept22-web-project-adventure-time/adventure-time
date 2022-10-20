@@ -5,7 +5,7 @@ export function renderAdventure(adventure) {
     const coffeeSection = document.createElement('section');
     coffeeSection.classList.add('coffee-section');
     const coffeeText = document.createElement('p');
-    coffeeText.textContent = 'Grab your coffee at...';
+    coffeeText.textContent = 'Grab your coffee at ';
     const coffee = document.createElement('h1');
     coffee.textContent = adventure.coffeeShop;
     coffeeSection.append(coffeeText, coffee);
@@ -13,7 +13,7 @@ export function renderAdventure(adventure) {
     const activitySection = document.createElement('section');
     activitySection.classList.add('activity-section');
     const activityText = document.createElement('p');
-    activityText.textContent = 'then...';
+    activityText.textContent = 'then ';
     const activity = document.createElement('h1');
     activity.textContent = adventure.activity;
     activitySection.append(activityText, activity);
@@ -22,7 +22,7 @@ export function renderAdventure(adventure) {
     eaterySection.classList.add('eatery-section');
     const eatery = document.createElement('h1');
     const eateryText = document.createElement('p');
-    eateryText.textContent = 'and finish with a meal at...';
+    eateryText.textContent = 'and finish with a meal at ';
     eatery.textContent = adventure.eatery;
     eaterySection.append(eateryText, eatery);
 
@@ -31,17 +31,29 @@ export function renderAdventure(adventure) {
     return div;
 }
 
-export function renderSavedAdventures({ coffee, activity, eatery }) {
+export function renderSavedAdventures(adventure) {
     const li = document.createElement('li');
+    const coffeeIntro = document.createElement('span');
+    coffeeIntro.textContent = 'Coffee at ';
+
     const coffeeShopEl = document.createElement('span');
-    coffeeShopEl.textContent = coffee;
+    coffeeShopEl.textContent = adventure.coffee;
+    coffeeShopEl.classList.add('bold');
+
+    const activityIntro = document.createElement('span');
+    activityIntro.textContent = ', then ';
 
     const activityEl = document.createElement('span');
-    activityEl.textContent = activity;
+    activityEl.textContent = adventure.activity;
+    activityEl.classList.add('bold');
+
+    const eateryIntro = document.createElement('span');
+    eateryIntro.textContent = ' & eat at ';
 
     const eateryEl = document.createElement('span');
-    eateryEl.textContent = eatery;
+    eateryEl.textContent = adventure.eatery;
+    eateryEl.classList.add('bold');
 
-    li.append(coffeeShopEl, activityEl, eateryEl);
+    li.append(coffeeIntro, coffeeShopEl, activityIntro, activityEl, eateryIntro, eateryEl);
     return li;
 }

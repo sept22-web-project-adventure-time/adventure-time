@@ -1,14 +1,132 @@
-.coffee-section h1 {
-    background: rgb(105, 189, 105);
+.adventure-container section {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 30px;
+    margin: 20px;
+}
+
+.adventure-container section h1 {
+    color: white;
+    font-size: 5vw;
+    margin: 0;
+    padding: 10px 20px 20px 20px;
+    background-color: rgba(0, 0, 0, 0.45);
+    border-radius: 30px;
+}
+.adventure-container section p {
+    color: white;
+    /* padding-top: 30px; */
+    font-size: 2.5vw;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
 }
 
 .coffee-section {
-    background: yellow;
+    background-image: url(/assets/coffee.jpeg);
 }
 
 .activity-section {
-    background-color: blue;
+    background-image: url(/assets/activity.jpeg);
 }
 
 .eatery-section {
+    background-image: url(/assets/eatery3.jpeg);
+}
+
+.save-button {
+    position: relative;
+    display: inline-block;
+    height: 60px;
+    width: 120px;
+    background-color: #dc955f;
+    font-size: 1.9rem;
+    justify-content: center;
+    border-radius: 10px;
+    font-family: 'Oswald', sans-serif;
+    color: rgb(53, 24, 24);
+}
+
+/* .save-button .hover-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+/* position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+} */
+
+/* .save-button:hover .hover-text {
+    visibility: visible;
+} */
+
+.new-button {
+    position: relative;
+    display: inline-block;
+    height: 60px;
+    width: 120px;
+    background-color: #dc955f;
+    font-size: 1.9rem;
+    justify-content: center;
+    border-radius: 10px;
+    font-family: 'Oswald', sans-serif;
+    color: rgb(53, 24, 24);
+
+    /* padding-bottom: 10px; */
+}
+.new-button:hover {
+    background-color: #d37c3a;
+}
+.save-button:hover {
+    background-color: #d37c3a;
+}
+
+/* .new-button .hover-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+/* position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+} */
+
+.new-button:hover .hover-text {
+    visibility: visible;
+}
+main {
+    display: grid;
+    /* grid-template-rows: 130px 1fr 1fr; */
+    text-align: center;
+    padding: 10px;
+}
+
+main h1 {
+    padding: 0;
+    font-size: 4.5vw;
+    color: #dc955f;
+}
+
+.button-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
 }

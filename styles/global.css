@@ -1,21 +1,23 @@
 :root {
     --background: rgb(224, 234, 247);
-    --header-background: white;
-    --text-color: rgb(7, 5, 68);
+    --header-background: #523a32;
+    --text-color: rgb(44, 41, 41);
     --label-color: rgb(75, 102, 98);
     --placeholder-color: rgb(136, 136, 153);
     --offset-color: rgb(217, 236, 217);
     --action-color: rgb(77, 132, 252);
 
-    --primary-font: 'Rubik', Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans',
-        'DejaVu Sans', 'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
+    /* --primary-font: 'Rubik', Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans',
+        'DejaVu Sans', 'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif; */
+    --primary-font: 'Oswald', sans-serif;
 }
 
 body {
     height: 100vh;
-    font-family: var(--primary-font);
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
     color: var(--text-color);
-    background: var(--background);
+    /* background: var(--background); */
     display: grid;
     grid-template-rows: auto 1fr;
 }
@@ -23,30 +25,33 @@ body {
 .page-header {
     position: sticky;
     top: 0;
-    padding: 15px;
+    /* padding: 15px; */
     height: 80px;
 
     display: flex;
     align-items: center;
     gap: 10px;
+    color: white;
 
     background-color: var(--header-background);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .page-header .logo {
-    height: 100%;
+    height: 80%;
+    padding-left: 20px;
 }
 
 .page-header .title {
-    font-size: 1.3em;
+    font-size: 4vw;
     font-weight: 800;
     flex-grow: 2;
+    padding-left: 30px;
 }
 
 .page-header nav {
     display: flex;
-    gap: 10px;
+    /* gap: 10px; */
 }
 
 main {
@@ -68,4 +73,27 @@ main {
 
 .hidden {
     display: none;
+}
+
+.page-header a {
+    background-color: #523a32;
+    box-shadow: 0 5px 0 #2e211c;
+    color: white;
+    padding: 1em 1.5em;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+}
+
+.page-header a:hover {
+    background-color: white;
+    box-shadow: 0 5px 0 #6b6b6b;
+    color: #523a32;
+    font-weight: bold;
+}
+
+.page-header a:active {
+    box-shadow: none;
+    top: 5px;
 }

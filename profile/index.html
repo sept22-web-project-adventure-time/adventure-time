@@ -7,8 +7,8 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
         <!-- title and favicon -->
-        <title>Supabase Web App</title>
-        <link rel="icon" type="image/x-icon" href="/assets/alchemy-favicon.png" />
+        <title>Adventure Time | Profile</title>
+        <link rel="icon" type="image/x-icon" href="/assets/cycling.png" />
 
         <!-- js -->
         <script
@@ -25,23 +25,34 @@
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap"
         />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Oswald&family=Sacramento&display=swap"
+            rel="stylesheet"
+        />
 
         <!-- css -->
         <link rel="stylesheet" href="/styles/reset.css" />
         <link rel="stylesheet" href="/styles/global.css" />
         <link rel="stylesheet" href="/styles/form.css" />
+        <link rel="stylesheet" href="/styles/profile.css" />
         <!-- add link for page specific css -->
     </head>
 
     <body>
         <header class="page-header">
-            <!-- <img class="logo" src="/assets/html_css_js.png" alt="logo" /> -->
+            <img class="logo" src="/assets/Icon_cycling.png" alt="logo" />
             <p class="title">Adventure Time</p>
             <nav>
+                <a href="/adventure/">✨ New Adventure ✨</a>
+
                 <a href="/">Home</a>
                 <a href="/profile/">Profile</a>
                 <a href="/about/">About Us</a>
-                <a id="sign-out-link" href="auth">Sign Out</a>
+                <a id="sign-out-link" href="../auth/">Sign Out</a>
             </nav>
         </header>
 
@@ -49,6 +60,7 @@
             <div>
                 <p id="error-display"></p>
                 <form id="profile-form">
+                    <h2>My Profile</h2>
                     <label>
                         <div>Name</div>
                         <input name="name" id="profile-name" required placeholder="Name" />
@@ -76,6 +88,7 @@
                     <button id="save-button">Save</button>
                 </form>
             </div>
+            <h2 id="saved-adventures-header">My Saved Adventures</h2>
             <ul id="saved-adventures-display"></ul>
         </main>
     </body>

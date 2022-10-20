@@ -1,28 +1,42 @@
 main {
     display: grid;
-    grid-template-rows: 100px 50px 100px;
+    grid-template-rows: 120px 200px 100px;
     align-content: center;
     text-align: center;
+    background-image: url(/assets/Portland.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 6vw;
     margin: 20px;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+}
+
+h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3vw;
+    padding-bottom: 20px;
+    color: white;
 }
 
 .adventure-button {
     border-radius: 4px;
-    background-color: #fefae0;
+    background-color: #dc955f;
     border: none;
     color: #523a32;
     text-align: center;
     font-size: 22px;
+    font-weight: bold;
     padding: 20px;
     width: 225px;
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
     align-content: center;
+    justify-self: center;
 }
 
 .adventure-button span {
@@ -40,6 +54,7 @@ h1 {
     top: 0;
     right: -20px;
     transition: 0.5s;
+    align-content: center;
 }
 
 .adventure-button:hover span {

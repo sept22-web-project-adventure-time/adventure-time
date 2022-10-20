@@ -1,6 +1,12 @@
 // Imports
 import '../auth/user.js';
-import { updateProfile, getUser, getProfile, getSavedAdventures } from '../fetch-utils.js';
+import {
+    updateProfile,
+    getUser,
+    getProfile,
+    getSavedAdventures,
+    deleteSavedAdventures,
+} from '../fetch-utils.js';
 import { renderSavedAdventures } from '../render-utils.js';
 
 // DOM
@@ -16,9 +22,14 @@ const savedAdventuresList = document.getElementById('saved-adventures-display');
 let profile = null;
 let error = null;
 let user = getUser();
-// let savedAdventures = [];
+let adventureList = [];
 
 // Events
+async function fetchAndDisplay() {
+    adventureList = await getSavedAdventures(user.id);
+    displaySavedAdventures(adventureList);
+}
+
 window.addEventListener('load', async () => {
     const response = await getProfile(user.id);
     profile = response.data;
@@ -29,9 +40,7 @@ window.addEventListener('load', async () => {
     if (profile) {
         displayProfile();
     }
-
-    const adventureList = await getSavedAdventures(user.id);
-    displaySavedAdventures(adventureList);
+    await fetchAndDisplay();
 });
 
 profileForm.addEventListener('submit', async (e) => {
@@ -69,8 +78,20 @@ function displayProfile() {
 }
 
 function displaySavedAdventures(adventureList) {
-    for (let item of adventureList) {
-        const savedAdventureEl = renderSavedAdventures(item);
+    for (let adventure of adventureList) {
+        const savedAdventureEl = renderSavedAdventures(adventure);
+
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = '🗑';
+        const hoverSpan = document.createElement('span');
+        hoverSpan.classList.add('hover-text');
+        hoverSpan.textContent = 'Delete Adventure';
+        deleteButton.addEventListener('click', async () => {
+            await deleteSavedAdventures(adventure.id);
+            savedAdventureEl.innerHTML = '';
+        });
+        deleteButton.append(hoverSpan);
+        savedAdventureEl.append(deleteButton);
         savedAdventuresList.append(savedAdventureEl);
     }
 }

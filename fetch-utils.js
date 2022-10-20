@@ -57,6 +57,7 @@ export async function getSavedAdventures(user_id) {
     let adventureList = [];
     for (let adventure of adventures.data) {
         let adventureObject = {
+            id: adventure.id,
             coffee: '',
             activity: '',
             eatery: '',
@@ -79,4 +80,8 @@ export async function getSavedAdventures(user_id) {
         adventureList.push(adventureObject);
     }
     return adventureList;
+}
+
+export async function deleteSavedAdventures(id) {
+    return await client.from('saved_adventures').delete().eq('id', id).single();
 }
