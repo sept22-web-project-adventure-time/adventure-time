@@ -89,3 +89,10 @@ main {
 .linked-in {
     max-width: 25%;
 }
+
+footer {
+    background-color: #523a32;
+    color: white;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
