@@ -4,10 +4,10 @@
 Given that Portland is rated the top city in the U.S. to eat in, it can be overwhelming to actually choose a spot to eat. Along the same lines, with so many fun activities at your disposal, it can feel impossible to plan a day. So, we created an app in which we handle the plan and you handle the fun. But first, coffee. With the click of a button, Adventure Time serves you a full day of fun, from coffee to activity to dinner.
 
 ## Dev Team
-Abdullahi Elmi - [Github](https://github.com/ElmiAbdullahi) | [LinkedIn](https://www.linkedin.com/in/abdullahi-elmi14/)
-Emily Sellers - [Github](https://github.com/emilysellers) | [LinkedIn](https://www.linkedin.com/in/emilymsellers/)
-Hana Acciaioli - [Github](https://github.com/hana-acciaioli) | [LinkedIn](https://www.linkedin.com/in/hana-jones-acciaioli/)
-Hunter Czarapata - [Github](https://github.com/Czarapata-Hunter) | [LinkedIn](https://www.linkedin.com/in/hunter-czarapata/)
+* Abdullahi Elmi - [Github](https://github.com/ElmiAbdullahi) | [LinkedIn](https://www.linkedin.com/in/abdullahi-elmi14/)
+* Emily Sellers - [Github](https://github.com/emilysellers) | [LinkedIn](https://www.linkedin.com/in/emilymsellers/)
+* Hana Acciaioli - [Github](https://github.com/hana-acciaioli) | [LinkedIn](https://www.linkedin.com/in/hana-jones-acciaioli/)
+* Hunter Czarapata - [Github](https://github.com/Czarapata-Hunter) | [LinkedIn](https://www.linkedin.com/in/hunter-czarapata/)
 
 ## How it works
 - Sign up or sign in (your profile is created for you upon sign up)
