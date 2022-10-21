@@ -17,16 +17,16 @@ Given that Portland is rated the top city in the U.S. to eat in, it can be overw
 - Enjoy your PDX adventures!  
 
 ## Deployed site
-[View our deployed site on Netlify.] (https://sept22-web-adventure-time.netlify.app/auth/?redirectUrl=https%3A%2F%2Fsept22-web-adventure-time.netlify.app%2F)
+[View our deployed site on Netlify.](https://sept22-web-adventure-time.netlify.app/auth/?redirectUrl=https%3A%2F%2Fsept22-web-adventure-time.netlify.app%2F)
 
 ## Out plan
 [See our Whimsical planning board here.](https://whimsical.com/adventure-time-project-planning-J8GAs6X8A4WNjNsKCVaamm)
 
 ## Technologies
 ### Frontend Tech
-HTML
-CSS
-JavaScript
+* HTML
+* CSS
+* JavaScript
 
 ### Backend Tech
-Supabase
+* Supabase
